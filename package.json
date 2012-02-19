@@ -1,0 +1,17 @@
+{
+  "author": "Bram Stein <b.l.stein@gmail.com> (http://www.bramstein.com/)",
+  "name": "funcy",
+  "description": "An experiment in adding functional pattern matching to JavaScript.",
+  "keywords": ["pattern matching", "functional"],
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/bramstein/funcy.git"
+  },
+  "main": "./lib/fun.js",
+  "engines": {
+    "node": "*"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}
