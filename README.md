@@ -9,7 +9,7 @@ Pattern matching is a form of conditional branching which allows you to concisel
 
 The above function implements a simple factorial function using pattern matching. When you call `fact(10)` the value ‘10’ is matched against the first pattern ‘0’. This match fails and the next pattern is evaluated. The ‘$’ in the next pattern is an example of a parameter. A parameter matches anything, so the match succeeds and ‘10’ is passed as an argument to the anonymous function. Since this is a recursive function it will match the second pattern until the argument to the function reaches zero and then terminates. Note that this example uses JavaScript 1.8 syntax, code in previous JavaScript versions will be slightly more verbose.
 
-** Note: This is an experiment, do not use this in real code **
+**Note: This is an experiment, do not use this in real code**
 
 ## Usage
 
