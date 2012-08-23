@@ -1,3 +1,4 @@
+[![build status](https://secure.travis-ci.org/bramstein/funcy.png)](http://travis-ci.org/bramstein/funcy)
 ## Functional Pattern Matching in JavaScript
 
 Pattern matching is a form of conditional branching which allows you to concisely match on data structure patterns and bind variables at the same time ( [Wikipedia](http://en.wikipedia.org/wiki/Conditional_statement#Pattern_matching)). Pattern matching is supported in some functional languages such as ML, Haskell, OCaml, and Erlang. This library implements pattern matching for the JavaScript language in an efficient and concise way. The following example shows what pattern matching in JavaScript looks like:
