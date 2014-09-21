@@ -27,12 +27,15 @@ A pattern expression is an array literal with a variable number of patterns, and
 
 ### Patterns
 
-A pattern is one of the following types: `atom`, `Object`, `Array`, `Function`, or the special wildcard and parameter patterns. The wildcard pattern matches against any value, but does not return anything. The parameter pattern on the other hand returns the value it was matched against, and also matches against any value.
+A pattern is one of the following types: `atom`, `RegExp`, `Object`, `Array`, `Function`, or the special wildcard and parameter patterns. The wildcard pattern matches against any value, but does not return anything. The parameter pattern on the other hand returns the value it was matched against, and also matches against any value.
 
 <dl>
     <dt>Atom</dt>
     <dd>Atoms match against values that are strictly equal. No type conversion is performed. Atoms are any of the following JavaScript types (or values): `Number`, `String`, `Boolean`, `null`, `undefined`, `NaN`, and `Infinity`.</dd>
     
+    <dt>RegExp</dt>
+    <dd>RegExp match against values that are string. Uses <i>regExpPattern.test(value)</i> to match. 
+
     <dt>Object</dt>
     <dd>Objects match against values that are objects, of the same type (determined by the `object.constructor` property), have the same number of properties with all keys and values being strictly equal. The order in which the properties are declared is not important. Property names cannot contain wildcards.</dd>
     <dt>Array</dt>
@@ -53,6 +56,9 @@ The following are all valid pattern expressions with an empty anonymous function
     // matches 1
     [1, function () {}]
     
+    // matches /ok$/ regular expression
+    [/ok$/,function(){}]
+
     // matches {key: 'value'}
     [{key: 'value'}, function () {}]
     
