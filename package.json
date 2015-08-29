@@ -2,8 +2,11 @@
   "author": "Bram Stein <b.l.stein@gmail.com> (http://www.bramstein.com/)",
   "name": "funcy",
   "description": "An experiment in adding functional pattern matching to JavaScript.",
-  "keywords": ["pattern matching", "functional"],
-  "version": "0.0.2",
+  "keywords": [
+    "pattern matching",
+    "functional"
+  ],
+  "version": "0.0.3",
   "repository": {
     "type": "git",
     "url": "git://github.com/bramstein/funcy.git"
