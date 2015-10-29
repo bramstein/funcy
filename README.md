@@ -3,11 +3,11 @@
 Pattern matching is a form of conditional branching which allows you to concisely match on data structure patterns and bind variables at the same time ( [Wikipedia](http://en.wikipedia.org/wiki/Conditional_statement#Pattern_matching)). Pattern matching is supported in some functional languages such as ML, Haskell, OCaml, and Erlang. This library implements pattern matching for the JavaScript language in an efficient and concise way. The following example shows what pattern matching in JavaScript looks like:
 
     var fact = fun(
-        [0, function ()  1],
-        [$, function (n) n * fact(n - 1)]
+        [0, () =>  1],
+        [$, (n) => n * fact(n - 1)]
     );
 
-The above function implements a simple factorial function using pattern matching. When you call `fact(10)` the value ‘10’ is matched against the first pattern ‘0’. This match fails and the next pattern is evaluated. The ‘$’ in the next pattern is an example of a parameter. A parameter matches anything, so the match succeeds and ‘10’ is passed as an argument to the anonymous function. Since this is a recursive function it will match the second pattern until the argument to the function reaches zero and then terminates. Note that this example uses JavaScript 1.8 syntax, code in previous JavaScript versions will be slightly more verbose.
+The above function implements a simple factorial function using pattern matching. When you call `fact(10)` the value ‘10’ is matched against the first pattern ‘0’. This match fails and the next pattern is evaluated. The ‘$’ in the next pattern is an example of a parameter. A parameter matches anything, so the match succeeds and ‘10’ is passed as an argument to the anonymous function. Since this is a recursive function it will match the second pattern until the argument to the function reaches zero and then terminates. Note that this example uses JavaScript ES6 syntax, code in previous JavaScript versions will be slightly more verbose.
 
 **Note: This is an experiment, do not use this in real code**
 
@@ -102,15 +102,15 @@ To keep my code (and these examples) concise I usually assign the special parame
 Using these variables we can implement a simple (but inefficient) factorial function.
 
     var fact = fun(
-        [0, function ()  { return 1; }],
+        [0, function () { return 1; }],
         [$, function (n) { return n * fact(n - 1); }]
     );
 
-In JavaScript 1.8 it is possible to use a shorthand closure syntax, so the above factorial function can be rewritten as:
+In JavaScript ES6 it is possible to use a shorthand arrow functions, so the above factorial function can be rewritten as:
 
     var fact = fun(
-        [0, function ()  1],
-        [$, function (n) n * fact(n - 1)]
+        [0, () => 1],
+        [$, (n) => n * fact(n - 1)]
     );
 
 Another common use of pattern matching is to determine if a value is of a certain type and perform an action depending on the result. For example, let's say we have a print function which logs its value to the console. We would however like to customize the output for some data types. We can accomplish this using pattern matching as follows:
