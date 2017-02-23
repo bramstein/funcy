@@ -12,6 +12,7 @@
     "url": "git://github.com/bramstein/funcy.git"
   },
   "main": "./lib/fun.js",
+  "license": "BSD-2-Clause",
   "engines": {
     "node": "*"
   },
