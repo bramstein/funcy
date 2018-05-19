@@ -30,25 +30,25 @@ A pattern expression is an array literal with a variable number of patterns, and
 A pattern is one of the following types: `atom`, `RegExp`, `Object`, `Array`, `Function`, or the special wildcard and parameter patterns. The wildcard pattern matches against any value, but does not return anything. The parameter pattern on the other hand returns the value it was matched against, and also matches against any value.
 
 <dl>
-    <dt>Atom</dt>
-    <dd>Atoms match against values that are strictly equal. No type conversion is performed. Atoms are any of the following JavaScript types (or values): `Number`, `String`, `Boolean`, `null`, `undefined`, `NaN`, and `Infinity`.</dd>
+<dt>Atom</dt>
+<dd>Atoms match against values that are strictly equal. No type conversion is performed. Atoms are any of the following JavaScript types (or values): `Number`, `String`, `Boolean`, `null`, `undefined`, `NaN`, and `Infinity`.</dd>
     
-    <dt>RegExp</dt>
-    <dd>RegExp match against values that are string. Uses <i>regExpPattern.test(value)</i> to match. 
+<dt>RegExp</dt>
+<dd>RegExp match against values that are string. Uses <i>regExpPattern.test(value)</i> to match. 
 
-    <dt>Object</dt>
-    <dd>Objects match against values that are objects, of the same type (determined by the `object.constructor` property), have the same number of properties with all keys and values being strictly equal. The order in which the properties are declared is not important. Property names cannot contain wildcards.</dd>
-    <dt>Array</dt>
-    <dd>Arrays match against values that are arrays, have the same number of elements with all elements being strictly equal and in the same order as the pattern array.</dd>
+<dt>Object</dt>
+<dd>Objects match against values that are objects, of the same type (determined by the `object.constructor` property), have the same number of properties with all keys and values being strictly equal. The order in which the properties are declared is not important. Property names cannot contain wildcards.</dd>
+<dt>Array</dt>
+<dd>Arrays match against values that are arrays, have the same number of elements with all elements being strictly equal and in the same order as the pattern array.</dd>
     
-    <dt>Parameter</dt>
-    <dd>Parameter matches against a value of any type, and returns that value as an argument to the anonymous function in the pattern expression. The values are given in the order the parameters are defined in the pattern(s).</dd>
+<dt>Parameter</dt>
+<dd>Parameter matches against a value of any type, and returns that value as an argument to the anonymous function in the pattern expression. The values are given in the order the parameters are defined in the pattern(s).</dd>
     
-    <dt>Wildcard</dt>
-    <dd>Wildcard matches against a value of any type, but does not return that value.</dd>
+<dt>Wildcard</dt>
+<dd>Wildcard matches against a value of any type, but does not return that value.</dd>
     
-    <dt>Function</dt>
-    <dd>Functions match against values that are of the same type (determined by `function.constructor`.) If a match is successful the value is returned. `Parameter` and `Wildcard` are special instances of the `Function` pattern which do not check if the value and pattern are of the same type.</dd>
+<dt>Function</dt>
+<dd>Functions match against values that are of the same type (determined by `function.constructor`.) If a match is successful the value is returned. `Parameter` and `Wildcard` are special instances of the `Function` pattern which do not check if the value and pattern are of the same type.</dd>
 </dl>
 
 The following are all valid pattern expressions with an empty anonymous function.
